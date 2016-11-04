@@ -1,1 +1,9 @@
-<div>main{{name}}</div>
+<div class="col-md-2">
+    <ul class="nav">
+        <li ng-repeat="item in list" ng-click="gotoAdmin(item.type)">{{item.name}}</li>
+    </ul>
+</div>
+
+<div class="col-md-10">
+    <div ui-view name="mainView"></div>
+</div>

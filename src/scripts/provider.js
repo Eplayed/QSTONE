@@ -15,8 +15,27 @@
             })
             .state('tabs', {
                 url: "/tab",
-                templateUrl: "/templates/main.html",
-                controller: "mainController"
+                templateUrl: "main.html",
+                controller: "mainController",
+                abstract: true
+            })
+            .state('tabs.usersAccountAdmin', {
+                url: "/usersAccountAdmin",
+                views: {
+                    'mainView': {
+                        templateUrl: "accountAdmin.html"
+
+                    }
+                }
+            })
+            .state('tabs.advertisementAdmin', {
+                url: "/advertisementAdmin",
+                views: {
+                    'mainView': {
+                        templateUrl: "advertisement.html"
+
+                    }
+                }
             })
         $urlRouterProvider.otherwise(function () {
             return "/login";
