@@ -23,8 +23,18 @@
                 url: "/usersAccountAdmin",
                 views: {
                     'mainView': {
-                        templateUrl: "accountAdmin.html"
+                        templateUrl: "accountAdmin/accountAdmin.html",
+                        controller:"accountAdminController"
 
+                    }
+                }
+            })
+            .state('tabs.usersAccountAdmin.user', {
+                url: "/user/:id",
+                views: {
+                    'accountView': {
+                        templateUrl: "accountAdmin/accountUserModule.html",
+                        controller:"accountUserController"
                     }
                 }
             })
@@ -33,6 +43,7 @@
                 views: {
                     'mainView': {
                         templateUrl: "advertisement.html"
+
 
                     }
                 }

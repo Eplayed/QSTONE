@@ -3,8 +3,13 @@
  */
 (function () {
     "use strict";
-    var app = angular.module("QSTONE", ["providerModule", "loginModule", "templates"]);
+    var app = angular.module("QSTONE", ["providerModule", "loginModule", "templates",
+        "settingsModule","ajoslin.promise-tracker","loginServiceModule","accountAdminModule",
+    "accountUserModule"]);
 
+    app.run(["$rootScope","promiseTracker",function ($rootScope,promiseTracker) {
+        $rootScope.loadingTracker = promiseTracker();
+    }])
     app.controller("mainController", ["$scope","$state", function ($scope,$state) {
         $scope.list = [
             {

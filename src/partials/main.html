@@ -1,7 +1,7 @@
 <div class="col-md-2">
-    <ul class="nav">
-        <li ng-repeat="item in list" ng-click="gotoAdmin(item.type)">{{item.name}}</li>
-    </ul>
+    <div class="list-group">
+        <a ng-repeat="item in list" class="list-group-item" ng-click="gotoAdmin(item.type)">{{item.name}}</a>
+    </div>
 </div>
 
 <div class="col-md-10">
