@@ -1,9 +1,13 @@
+<div style="height: 80px;width: 100%;background: #000;">
+    <p style="text-indent: 30%;font-size: 32px;line-height: 80px;color: #fff;">Qstone管理平台</p>
+</div>
+
 <div class="col-md-2">
     <div class="list-group">
-        <a ng-repeat="item in list" class="list-group-item" ng-click="gotoAdmin(item.type)">{{item.name}}</a>
+        <a ng-repeat="item in list" class="list-group-item" ng-click="gotoAdmin(item)">{{item.name}}</a>
     </div>
 </div>
 
-<div class="col-md-10">
+<div class="col-md-10 ">
     <div ui-view name="mainView"></div>
 </div>

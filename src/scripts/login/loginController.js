@@ -8,10 +8,12 @@
            var phoneNum=$scope.userInfo.phoneNum;
            var psd=$scope.userInfo.passWord;
            console.log(phoneNum+"+"+psd);
-           loginService.login(phoneNum,psd).then(function (r) {
-               console.log(r);
-           })
-           // $state.go("tabs.usersAccountAdmin")
+           // loginService.login(phoneNum,psd).then(function (r) {
+           //     console.log(r);
+           // },function (r) {
+           //     console.log(r);
+           // })
+           $state.go("tabs.usersAccountAdmin")
        }
     }]);
 }());

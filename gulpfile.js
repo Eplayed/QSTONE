@@ -85,7 +85,8 @@ gulp.task("min:js", function () {
             bowerroot + "angular-native-picker/build/angular-datepicker.js",
             bowerroot + "angular-promise-tracker/promise-tracker.js",
             bowerroot + "angular-promise-tracker/promise-tracker-http-interceptor.js",
-            bowerroot + "bootstrap/dist/js/bootstrap.js"
+            bowerroot + "bootstrap/dist/js/bootstrap.js",
+            bowerroot + "highcharts/js/highcharts.js"
         ], {base: "."})
             .pipe(concat(paths.libjs))
             //.pipe(uglify())
@@ -120,11 +121,15 @@ gulp.task("min:css", function () {
             bowerroot + "font-awesome/font-awesome.css",
             bowerroot + "angular-native-picker/build/themes/default.css",
             bowerroot + "angular-native-picker/build/themes/default.date.css",
+            bowerroot + "highcharts/css/highcharts.css"
         ])
             .pipe(urlAdjuster({replace: ["../fonts/", "fonts/"]})),
         gulp.src([
+            srcroot + "css/common.css",
             srcroot + "css/index.css",
-            srcroot + "css/login.css"
+            srcroot + "css/login.css",
+            srcroot + "css/account.css",
+            srcroot + "css/advertisement.css"
         ]))
         .pipe(concat(paths.appcss))
         //.pipe(cssmin())

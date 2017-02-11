@@ -42,7 +42,59 @@
                 url: "/advertisementAdmin",
                 views: {
                     'mainView': {
-                        templateUrl: "advertisement.html"
+                        templateUrl: "advertisement/advertisement.html"
+
+
+                    }
+                }
+            })
+            .state('tabs.advertisementAdmin.release', {
+                url: "/release",
+                views: {
+                    'advertisemenView': {
+                        templateUrl: "advertisement/advertisement.release.html"
+
+
+                    }
+                }
+            })
+            .state('tabs.advertisementAdmin.del', {
+                url: "/del",
+                views: {
+                    'advertisemenView': {
+                        templateUrl: "advertisement/advertisement.del.html"
+
+
+                    }
+                }
+            })
+
+            .state('tabs.dataStatistics', {
+                url: "/dataStatistics",
+                views: {
+                    'mainView': {
+                        templateUrl: "dataStatistics/dataStatistics.html",
+                        controller:"dataStatisticsController"
+
+
+                    }
+                }
+            })
+            .state('tabs.administration', {
+                url: "/administration",
+                views: {
+                    'mainView': {
+                        templateUrl: "administration/administration.html"
+
+
+                    }
+                }
+            })
+            .state('tabs.dataStatistics.today', {
+                url: "/today",
+                views: {
+                    'chartsView': {
+                        templateUrl: "dataStatistics/dataStatistics.today.html"
 
 
                     }

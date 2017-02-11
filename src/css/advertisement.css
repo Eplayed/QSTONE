@@ -1,0 +1,15 @@
+.adverUl{
+
+    width:100%;
+}
+.adverUl li{
+    padding: 10px 0;
+}
+.adverUl li i{
+    display: inline-block;
+    width:59%;
+}
+.adverUl li span{
+    display: inline-block;
+    width:40%;
+}
