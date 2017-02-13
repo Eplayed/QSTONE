@@ -1,0 +1,9 @@
+<div class="padding">活动管理</div>
+<div ui-view name="activityView">
+    <ul class="ul">
+       <li ng-repeat="item in activityData">
+           <span>{{item.name}}</span>
+           <i>{{item.cont}}</i>
+       </li>
+    </ul>
+</div>

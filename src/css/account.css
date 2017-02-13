@@ -1,20 +1,4 @@
-.ul{
-    list-style: none;
-    padding: 0;
-    width:100%;
-}
-.ul li{
-    padding: 10px 0;
-}
-.ul li i{
-    display: inline-block;
-    width:59%;
-}
-.ul li span{
-    display: inline-block;
-    width:40%;
-    color:#999;
-}
+
 .img div{
     padding: 10px 0;
 }

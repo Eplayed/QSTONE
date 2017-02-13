@@ -1,6 +1,6 @@
 (function () {
     "use strict";
-    var app = angular.module("providerModule", ['ui.router']);
+    var app = angular.module("providerModule", ['ui.router',"ngAnimate"]);
     app.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state("login", {
@@ -80,16 +80,6 @@
                     }
                 }
             })
-            .state('tabs.administration', {
-                url: "/administration",
-                views: {
-                    'mainView': {
-                        templateUrl: "administration/administration.html"
-
-
-                    }
-                }
-            })
             .state('tabs.dataStatistics.today', {
                 url: "/today",
                 views: {
@@ -100,6 +90,28 @@
                     }
                 }
             })
+            .state('tabs.administration', {
+                url: "/administration",
+                views: {
+                    'mainView': {
+                        templateUrl: "administration/administration.html"
+
+
+                    }
+                }
+            })
+            .state('tabs.activityManagement', {
+                url: "/activityManagement",
+                views: {
+                    'mainView': {
+                        templateUrl: "activityManagement/activityManagement.html",
+                        controller:"activityManagementController"
+
+
+                    }
+                }
+            })
+
         $urlRouterProvider.otherwise(function () {
             return "/login";
         })

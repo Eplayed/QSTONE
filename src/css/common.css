@@ -1,4 +1,80 @@
-ul{
+ul {
     list-style: none;
     padding: 0;
+}
+
+.padding {
+    padding: 10px;
+}
+
+.ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.ul li {
+    padding: 10px 0;
+}
+
+.ul li i {
+    display: inline-block;
+    width: 59%;
+}
+
+.ul li span {
+    display: inline-block;
+    width: 30%;
+    color: #999;
+}
+
+.navList.list-group-item {
+    border: none;
+    cursor: pointer;
+    color: #999;
+}
+
+.navList.list-group-item.selected {
+    color: #000;
+    font-weight: bold;
+}
+
+[ui-view].ng-enter, [ui-view].ng-leave {
+    position: absolute;
+    left: 0;
+    right: 0;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+[ui-view].ng-enter {
+    opacity: 0;
+    -webkit-transform: scale3d(0.5, 0.5, 0.5);
+    -moz-transform: scale3d(0.5, 0.5, 0.5);
+    transform: scale3d(0.5, 0.5, 0.5);
+}
+
+[ui-view].ng-enter-active {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    -moz-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+
+[ui-view].ng-leave {
+    opacity: 1;
+    /*padding-left: 0px;*/
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+[ui-view].ng-leave-active {
+    opacity: 0;
+    /*padding-left: 100px;*/
+    -webkit-transform: translate3d(100px, 0, 0);
+    -moz-transform: translate3d(100px, 0, 0);
+    transform: translate3d(100px, 0, 0);
 }

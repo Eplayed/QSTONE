@@ -86,7 +86,8 @@ gulp.task("min:js", function () {
             bowerroot + "angular-promise-tracker/promise-tracker.js",
             bowerroot + "angular-promise-tracker/promise-tracker-http-interceptor.js",
             bowerroot + "bootstrap/dist/js/bootstrap.js",
-            bowerroot + "highcharts/js/highcharts.js"
+            bowerroot + "highcharts/js/highcharts.js",
+            bowerroot + "angular-animate/angular-animate.js"
         ], {base: "."})
             .pipe(concat(paths.libjs))
             //.pipe(uglify())

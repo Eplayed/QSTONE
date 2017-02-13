@@ -1,13 +1,22 @@
 <div style="height: 80px;width: 100%;background: #000;">
-    <p style="text-indent: 30%;font-size: 32px;line-height: 80px;color: #fff;">Qstone管理平台</p>
+    <p style="text-align: center;font-size: 32px;line-height: 80px;color: #fff;">Qstone管理平台</p>
 </div>
 
 <div class="col-md-2">
     <div class="list-group">
-        <a ng-repeat="item in list" class="list-group-item" ng-click="gotoAdmin(item)">{{item.name}}</a>
+        <a class="list-group-item navList" ui-sref="tabs.usersAccountAdmin"
+           ui-sref-active="selected">用户账号管理</a>
+        <a class="list-group-item navList" ui-sref="tabs.advertisementAdmin"
+           ui-sref-active="selected">广告管理</a>
+        <a class="list-group-item navList" ui-sref="tabs.dataStatistics"
+           ui-sref-active="selected">数据统计</a>
+        <a class="list-group-item navList" ui-sref="tabs.activityManagement"
+           ui-sref-active="selected">活动管理</a>
+        <a class="list-group-item navList" ui-sref="tabs.administration"
+           ui-sref-active="selected">管理员账号管理</a>
     </div>
 </div>
 
-<div class="col-md-10 ">
+<div class="col-md-10 ui-view-container">
     <div ui-view name="mainView"></div>
 </div>
