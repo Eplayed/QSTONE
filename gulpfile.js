@@ -87,7 +87,8 @@ gulp.task("min:js", function () {
             bowerroot + "angular-promise-tracker/promise-tracker-http-interceptor.js",
             bowerroot + "bootstrap/dist/js/bootstrap.js",
             bowerroot + "highcharts/js/highcharts.js",
-            bowerroot + "angular-animate/angular-animate.js"
+            bowerroot + "angular-animate/angular-animate.js",
+            bowerroot + "bootstrap-switch/dist/js/bootstrap-switch.js"
         ], {base: "."})
             .pipe(concat(paths.libjs))
             //.pipe(uglify())
@@ -122,7 +123,8 @@ gulp.task("min:css", function () {
             bowerroot + "font-awesome/font-awesome.css",
             bowerroot + "angular-native-picker/build/themes/default.css",
             bowerroot + "angular-native-picker/build/themes/default.date.css",
-            bowerroot + "highcharts/css/highcharts.css"
+            bowerroot + "highcharts/css/highcharts.css",
+            bowerroot + "bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css"
         ])
             .pipe(urlAdjuster({replace: ["../fonts/", "fonts/"]})),
         gulp.src([

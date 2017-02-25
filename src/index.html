@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>QSTONE</title>
-    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <!--<meta http-equiv="Access-Control-Allow-Origin" content="*">-->
+    <!--<meta http-equiv="Content-Security-Policy"-->
+          <!--content="default-src 'self'  http://localhost:8080/ http://*.map.baidu.com http://*.map.bdimg.com http://nsclick.baidu.com data: gap: https://ssl.gstatic.com 'unsafe-eval';-->
+           <!--style-src 'self' 'unsafe-inline'; media-src *">-->
     <link href="app.css" rel="stylesheet"/>
 </head>
 <body ng-app="QSTONE">
@@ -11,5 +14,6 @@
 
 <script src="lib.js" type="text/javascript"></script>
 <script src="app.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=GqVkPFuaIl95kliFyEy04yUipPVirktU" ></script>
 </body>
 </html>

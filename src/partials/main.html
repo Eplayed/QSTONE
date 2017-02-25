@@ -4,15 +4,15 @@
 
 <div class="col-md-2">
     <div class="list-group">
-        <a class="list-group-item navList" ui-sref="tabs.usersAccountAdmin"
+        <a class="list-group-item navList" ui-sref="tabs.usersAccountAdmin({userId: itemUserId})"
            ui-sref-active="selected">用户账号管理</a>
-        <a class="list-group-item navList" ui-sref="tabs.advertisementAdmin"
+        <a class="list-group-item navList" ui-sref="tabs.advertisementAdmin({userId: itemUserId})"
            ui-sref-active="selected">广告管理</a>
-        <a class="list-group-item navList" ui-sref="tabs.dataStatistics"
+        <a class="list-group-item navList" ui-sref="tabs.dataStatistics({userId: itemUserId})"
            ui-sref-active="selected">数据统计</a>
-        <a class="list-group-item navList" ui-sref="tabs.activityManagement"
+        <a class="list-group-item navList" ui-sref="tabs.activityManagement({userId: itemUserId})"
            ui-sref-active="selected">活动管理</a>
-        <a class="list-group-item navList" ui-sref="tabs.administration"
+        <a class="list-group-item navList" ui-sref="tabs.administration({userId: itemUserId})"
            ui-sref-active="selected">管理员账号管理</a>
     </div>
 </div>

@@ -1,23 +1,29 @@
-<ul class="adverUl">
+
+
+<ul class="ul">
+    <li>
+        <span>广告编号</span>
+        <i>{{item.supplyid}}</i>
+    </li>
     <li>
         <span>广告主题</span>
-        <i>BMW</i>
+        <i>{{item.protitle}}</i>
     </li>
     <li>
         <span>广告主题图片</span>
-        <i><input type="file" value=""></i>
+        <i> <img src={{item.proimgurl}} alt=""></i>
     </li>
     <li>
         <span>广告详情</span>
-        <textarea></textarea>
-        <button>保存</button>
+        <i>{{item.pronames}}</i>
     </li>
     <li>
         <span>广告类型</span>
-        <i>普通广告</i>
+        <i>{{item.protype}}</i>
     </li>
     <li>
-        <span>广告置顶</span>
-        <i>是</i>
+        <span>浏览次数</span>
+        <i>{{item.viewcount}}</i>
     </li>
 </ul>
+<button class="btn" ng-click="del()">删除</button>

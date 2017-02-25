@@ -1,12 +1,20 @@
-<div class="padding">数据统计</div>
-<div style="width:230px;display: inline-block;float: left">
-    <ul class="list-group">
-        <li ng-repeat="item in data" class="list-group-item" ng-click="gotoCharts(item)">
-{{item.name}}
-        </li>
+<div class="padding" >
+    <div class="row">
+        <div class="col-xs-2">数据统计</div>
+        <div class="col-xs-2">
+            <select name="" id="" class="form-control" ng-model="data.currentSelected" ng-options="item.date for item in currentSelectedList"></select>
 
-    </ul>
+        </div>
+    </div>
 </div>
+<!--<div style="width:230px;display: inline-block;float: left">-->
+    <!--<ul class="list-group">-->
+        <!--<li ng-repeat="item in data" class="list-group-item" ng-click="gotoCharts(item)">-->
+<!--{{item.name}}-->
+        <!--</li>-->
+
+    <!--</ul>-->
+<!--</div>-->
 <div ui-view name="chartsView" style="width:59%;float: left">
-    <div id="container" style="min-width:400px;height:400px"></div>
+    <div id="container"></div>
 </div>

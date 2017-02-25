@@ -1,0 +1,96 @@
+
+<div class="padding">
+    <form class="form-horizontal col-xs-10">
+        <div class="form-group">
+            <label for="" class="col-xs-2 control-label">活动编号</label>
+            <div class="col-xs-10">
+                <p>{{item.activityid}}</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="" class="col-xs-2 control-label">活动主题</label>
+            <div class="col-xs-10">
+               <p>{{item.activitytitle}}</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="" class="col-xs-2 control-label">男生参加人数</label>
+            <div class="col-xs-10">
+                <p>{{item.manpeople}}</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="" class="col-xs-2 control-label">女生参加人数</label>
+            <div class="col-xs-10">
+                <p>{{item.womanpeople}}</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="" class="col-xs-2 control-label">位置信息</label>
+            <div class="col-xs-10">
+                <app-map></app-map>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="" class="col-xs-2 control-label">可参加距离限制</label>
+            <div class="col-xs-10">
+                <p>{{item.rangelimit}}</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="" class="col-xs-2 control-label">活动发布有效时间</label>
+            <div class="col-xs-10">
+               <p>{{item.deadline}}</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="" class="col-xs-2 control-label">信用等级限制</label>
+            <div class="col-xs-10">
+                <select name="" id="" ng-model="item.creditlevel">
+                    <option val="">{{item.creditlevel}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="" class="col-xs-2 control-label">活动发布人</label>
+            <div class="col-xs-10">
+                <p>{{item.publisher}}</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="" class="col-xs-2 control-label">活动发布时间</label>
+            <div class="col-xs-10">
+               <p>{{item.regtime}}</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="" class="col-xs-2 control-label">活动状态</label>
+            <div class="col-xs-10">
+                <select name="" id="" ng-model="item.status">
+                    <option val="">{{item.status}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="" class="col-xs-2 control-label">所属板块</label>
+            <div class="col-xs-10">
+                <select name="" id="" ng-model="item.activitytype">
+                    <option val="">{{item.activitytype}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="" class="col-xs-2 control-label">活动置顶</label>
+            <div class="col-xs-10">
+                <div class="switch">
+                    <input type="checkbox" data-on-text="Yes" data-off-text="No" name="actReleaseIsTop" readonly ng-model="actReleaseIsTop" checked/>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-offset-2 col-xs-10">
+                <button ng-click="del()" class="btn btn-default">删除</button>
+            </div>
+        </div>
+    </form>
+</div>

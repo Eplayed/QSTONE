@@ -4,7 +4,10 @@
 (function () {
     "use strict";
     var app = angular.module("accountAdminModule", []);
-    app.controller("accountAdminController",["$scope",function ($scope) {
+    app.controller("accountAdminController",["$scope","$stateParams",function ($scope,$stateParams) {
+        $scope.init=function () {
+            console.log($stateParams);
+        }
         $scope.accountList = [
             {
                 "name": "kelthTayor",
@@ -77,5 +80,6 @@
                 "type":"正式"
             }
         ];
+        $scope.init();
     }])
 }());

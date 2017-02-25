@@ -1,9 +1,28 @@
-<div class="padding">活动管理</div>
-<div ui-view name="activityView">
-    <ul class="ul">
-       <li ng-repeat="item in activityData">
-           <span>{{item.name}}</span>
-           <i>{{item.cont}}</i>
-       </li>
-    </ul>
+<div class="padding">
+    <div ui-view name="activityView">
+        <div class="row">
+            <div class="col-xs-2">
+                活动管理
+            </div>
+            <div class="col-xs-2">
+                <select name="" id="" class="form-control" ng-model="activity.currentSelected"
+                        ng-options="item.date for item in currentSelectedActivityList"></select>
+            </div>
+            <div class="col-xs-8">
+                <button class="btn btn-success" style="float: right" ng-click="create()">发布活动</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-md-4" ng-repeat="item in activityItemList" ng-click="goToActivityItem(item)">
+                <div class="thumbnail">
+                    <div class="caption">
+                        <p>{{item.activityid}}</p>
+                        <h3 style="min-height:60px">{{item.activitytitle}}</h3>
+                        <p>地点：{{item.sitemap}}</p>
+                        <p><span>发布时间：</span>{{item.regtime}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

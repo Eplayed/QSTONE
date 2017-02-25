@@ -3,9 +3,21 @@
  */
 (function () {
     "use strict";
-    var baseUrl = "http://localhost:8080/qstone/"
+    var baseUrl = "/qstone/"
     angular.module("settingsModule", [])
         .constant("settings", {
-            loginUrl: baseUrl + "user/login"
+            loginUrl: baseUrl + "user/login",
+            // 广告
+            advertisementUrl:baseUrl+"supplys/paginateSupply",
+            advertisementCreateOrUpdateUrl:baseUrl+"supplys/saveOrUpdate",
+            // 统计
+            allStatisticsUrl:baseUrl+"count/sum",
+            todayStatisticsUrl:baseUrl+"count/todaySum",
+            // 活动
+            allActivityUrl:baseUrl+"activity/listAll",
+            topActivityUrl:baseUrl+"activity/topList",
+            delActivityUrl:baseUrl+"activity/del"
+
+
         });
 }());

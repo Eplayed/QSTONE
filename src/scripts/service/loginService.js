@@ -17,9 +17,9 @@
 
                     tracker:$rootScope.loadingTracker
                 }).then(function (r) {
-                    return r;
+                    return r.data;
                 },function (r) {
-                    throw r;
+                    throw r.data;
                 })
             }
         }

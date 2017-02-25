@@ -1,34 +1,20 @@
+
+<div ui-view name="advertisemenView">
 <div class="padding">广告
-    <div style="position: absolute;right: 0;">
-        <div style="float: left; padding-right: 20px;" ui-sref="tabs.advertisementAdmin.release">广告发布</div>
-        <div style="float: left;padding-right: 20px;" ui-sref="tabs.advertisementAdmin.del">广告删除</div>
+    <div style="float:right;">
+        <div style="float: left; padding-right: 20px;" ui-sref="tabs.advertisementAdmin.create">广告发布</div>
     </div>
 </div>
-<div ui-view name="advertisemenView">
-    <ul class="ul">
-        <li>
-            <span>广告编号</span>
-            <i>ggg116151054</i>
-        </li>
-        <li>
-            <span>广告主题</span>
-            <i>BMW</i>
-        </li>
-        <li>
-            <span>广告主题图片</span>
-            <i> <img src="../../img/4.jpg" alt=""></i>
-        </li>
-        <li>
-            <span>广告详情</span>
-            <i>BMW的蓝白标志宝马总部所在地巴伐利亚州州旗的颜色。百年来，宝马汽车由最初的一家飞机引擎生产厂发展成为以高级轿车为主导，并生产享誉全球的飞机引擎、越野车和摩托车的企业集团，名列世界汽车公司前列。宝马也被译为“巴依尔”。</i>
-        </li>
-        <li>
-            <span>广告类型</span>
-            <i>普通广告</i>
-        </li>
-        <li>
-            <span>浏览次数</span>
-            <i>123</i>
-        </li>
-    </ul>
+    <div class="row">
+        <div class="col-sm-6 col-md-4" ng-repeat="item in advertisementItemList" ng-click="goToAdvertisementItem(item)">
+            <div class="thumbnail">
+                <div class="caption">
+                    <p>{{item.supplyid}}</p>
+                    <h3>{{item.protitle}}</h3>
+                    <p>{{item.pronames}}</p>
+                    <p><span>发布时间：</span>{{item.regtime}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
